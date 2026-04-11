@@ -1,115 +1,104 @@
 import { useState, useEffect } from "react"
-import { X, MessageCircle } from "lucide-react"
+import { X, MessageCircle, ArrowRight } from "lucide-react"
 
 export default function WelcomeModal() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
+    // Show on every page load/refresh — no localStorage check
     const timer = setTimeout(() => {
       setOpen(true)
     }, 1200)
     return () => clearTimeout(timer)
   }, [])
 
-  const handleClose = () => setOpen(false)
+  const handleClose = () => {
+    setOpen(false)
+  }
 
   if (!open) return null
 
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-      style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+      style={{ backgroundColor: "rgba(0,0,0,0.35)" }}
       onClick={(e) => e.target === e.currentTarget && handleClose()}
     >
-      <div className="relative bg-white w-full max-w-sm shadow-xl animate-in zoom-in-95 fade-in duration-300">
-        {/* Blue top accent bar */}
-        <div className="h-1.5 w-full" style={{ backgroundColor: "var(--diic-blue)" }} />
-
-        {/* Close */}
+      <div className="relative bg-white shadow-2xl w-full max-w-sm overflow-hidden animate-in zoom-in-95 fade-in duration-300">
+        {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-3 right-3 z-10 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 p-1.5 transition-colors"
           aria-label="Close"
         >
-          <X size={18} />
+          <X size={14} />
         </button>
 
-        {/* Header row: logo + text side by side */}
-        <div className="flex items-center gap-4 px-6 pt-5 pb-4 border-b border-gray-100">
+        {/* Top banner with logo */}
+        <div
+          className="flex flex-col items-center justify-center py-8 px-6 gap-3"
+          style={{ backgroundColor: "white" }}
+        >
           <img
             src="/logo.jpeg"
-            alt="DIIC"
-            className="h-14 w-14 object-contain flex-shrink-0"
+            alt="DIIC Logo"
+            className="h-32 w-auto object-contain"
           />
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-0.5">
-              Delhi Innovation & Incubation Centre
-            </p>
-            <h2 className="text-base font-extrabold leading-snug" style={{ color: "var(--diic-dark)" }}>
-              Join our WhatsApp Community
-            </h2>
-          </div>
         </div>
 
-        {/* Body */}
-        <div className="px-6 py-5">
-          <p className="text-sm text-gray-500 leading-relaxed mb-5">
-            Stay connected with the latest updates, opportunities, and news from DIIC. Scan the code below to join.
-          </p>
-
-          {/* QR + label row */}
-          <div className="flex items-start gap-5 mb-5">
-            {/* QR placeholder — replace svg with <img src="qr.png"> when ready */}
-            <div className="flex-shrink-0 w-28 h-28 border border-gray-200 flex items-center justify-center bg-gray-50">
-              <svg width="80" height="80" viewBox="0 0 60 60" fill="none">
-                <rect x="5" y="5" width="20" height="20" fill="var(--diic-dark)" />
-                <rect x="9" y="9" width="12" height="12" fill="white" />
-                <rect x="12" y="12" width="6" height="6" fill="var(--diic-dark)" />
-                <rect x="35" y="5" width="20" height="20" fill="var(--diic-dark)" />
-                <rect x="39" y="9" width="12" height="12" fill="white" />
-                <rect x="42" y="12" width="6" height="6" fill="var(--diic-dark)" />
-                <rect x="5" y="35" width="20" height="20" fill="var(--diic-dark)" />
-                <rect x="9" y="39" width="12" height="12" fill="white" />
-                <rect x="12" y="42" width="6" height="6" fill="var(--diic-dark)" />
-                <rect x="35" y="35" width="6" height="6" fill="var(--diic-dark)" />
-                <rect x="43" y="35" width="6" height="6" fill="var(--diic-dark)" />
-                <rect x="35" y="43" width="6" height="6" fill="var(--diic-dark)" />
-                <rect x="43" y="43" width="12" height="12" fill="var(--diic-dark)" />
-                <rect x="35" y="51" width="6" height="6" fill="var(--diic-dark)" />
-              </svg>
-            </div>
-
-            <div className="pt-1">
-              <div className="flex items-center gap-1.5 mb-2">
-                <MessageCircle size={14} className="text-green-600" />
-                <span className="text-xs font-bold text-green-700">WhatsApp</span>
-              </div>
-              <p className="text-xs text-gray-500 leading-relaxed">
-                Open your phone camera and point it at the QR code to join directly.
-              </p>
-            </div>
+        {/* Content */}
+        <div className="p-6 flex flex-col items-center text-center gap-4">
+          <div>
+            <h2 className="text-lg font-extrabold tracking-tight mb-1" style={{ color: "var(--diic-dark)" }}>
+              Join Our WhatsApp Community
+            </h2>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Scan the QR code below to connect with entrepreneurs, mentors & innovators from DIIC.
+            </p>
           </div>
 
-          {/* CTA */}
+          {/* QR Code Placeholder */}
+          <div
+            className="w-40 h-40 flex items-center justify-center border-2 bg-gray-50"
+            style={{ borderColor: "var(--diic-blue)" }}
+          >
+            {/* Replace inner content with a real <img src="your-qr.png" /> when ready */}
+            <svg width="100" height="100" viewBox="0 0 60 60" fill="none">
+              <rect x="5" y="5" width="20" height="20" fill="var(--diic-dark)" />
+              <rect x="9" y="9" width="12" height="12" fill="white" />
+              <rect x="12" y="12" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="35" y="5" width="20" height="20" fill="var(--diic-dark)" />
+              <rect x="39" y="9" width="12" height="12" fill="white" />
+              <rect x="42" y="12" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="5" y="35" width="20" height="20" fill="var(--diic-dark)" />
+              <rect x="9" y="39" width="12" height="12" fill="white" />
+              <rect x="12" y="42" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="35" y="35" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="43" y="35" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="35" y="43" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="43" y="43" width="12" height="12" fill="var(--diic-dark)" />
+              <rect x="35" y="51" width="6" height="6" fill="var(--diic-dark)" />
+            </svg>
+          </div>
+
+          {/* Join Button */}
           <a
             href="#"
-            onClick={handleClose}
-            className="flex items-center justify-center gap-2 w-full py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 text-sm font-bold text-white transition-opacity hover:opacity-90"
             style={{ backgroundColor: "#25D366" }}
+            onClick={handleClose}
           >
-            <MessageCircle size={15} />
-            Join on WhatsApp
+            <MessageCircle size={16} />
+            Join WhatsApp Community
+            <ArrowRight size={15} className="ml-auto" />
           </a>
 
-          {/* Dismiss */}
-          <div className="text-center mt-3">
-            <button
-              onClick={handleClose}
-              className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              No thanks
-            </button>
-          </div>
+          <button
+            onClick={handleClose}
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Maybe later
+          </button>
         </div>
       </div>
     </div>
