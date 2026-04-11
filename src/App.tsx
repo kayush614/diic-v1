@@ -1,9 +1,7 @@
 import Header from "@/components/diic/Header"
 import Hero from "@/components/diic/Hero"
-import StatsBar from "@/components/diic/StatsBar"
 import HomeMainGrid from "@/components/diic/HomeMainGrid"
 import WelcomeModal from "@/components/diic/WelcomeModal"
-import SupportedBy from "@/components/diic/SupportedBy"
 import Footer from "@/components/diic/Footer"
 
 export default function App() {

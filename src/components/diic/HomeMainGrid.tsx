@@ -1,5 +1,4 @@
-import React from "react"
-import { ChevronRight, Camera, Trophy, Users, CheckSquare, FileText, Calendar, Bell } from "lucide-react"
+import { ChevronRight, Camera, Trophy, Users, CheckSquare, FileText } from "lucide-react"
 
 // Helper component for placeholder images
 const PlaceholderImage = ({ text, color = "bg-gray-100" }: { text: string; color?: string }) => (

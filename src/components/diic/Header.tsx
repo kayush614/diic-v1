@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { Menu, Phone } from "lucide-react"
+import { useState } from "react"
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 
@@ -30,12 +30,6 @@ function YoutubeIcon() {
   )
 }
 
-const topLinks = [
-  { label: "Home", href: "#" },
-  { label: "Contact Us", href: "#contact" },
-  { label: "Apply for Incubation", href: "#apply", highlight: true },
-]
-
 const navLinks = [
   { label: "About Us", href: "#about" },
   { label: "Programs", href: "#programs" },
@@ -44,14 +38,7 @@ const navLinks = [
 ]
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   return (
     <header
