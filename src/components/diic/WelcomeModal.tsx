@@ -52,9 +52,6 @@ export default function WelcomeModal() {
             <h2 className="text-lg font-extrabold tracking-tight mb-1" style={{ color: "var(--diic-dark)" }}>
               Join Our WhatsApp Community
             </h2>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Scan the QR code below to connect with entrepreneurs, mentors & innovators from DIIC.
-            </p>
           </div>
 
           {/* QR Code Placeholder */}
