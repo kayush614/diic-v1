@@ -1,24 +1,19 @@
 import { useState, useEffect } from "react"
-import { X, MessageCircle, Users, Lightbulb, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-
-const STORAGE_KEY = "diic-welcome-shown"
+import { X, MessageCircle, ArrowRight } from "lucide-react"
 
 export default function WelcomeModal() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
+    // Show on every page load/refresh — no localStorage check
     const timer = setTimeout(() => {
-      if (!localStorage.getItem(STORAGE_KEY)) {
-        setOpen(true)
-      }
+      setOpen(true)
     }, 1200)
     return () => clearTimeout(timer)
   }, [])
 
   const handleClose = () => {
     setOpen(false)
-    localStorage.setItem(STORAGE_KEY, "true")
   }
 
   if (!open) return null
@@ -26,147 +21,88 @@ export default function WelcomeModal() {
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-      style={{ backgroundColor: "rgba(0,0,0,0.65)", backdropFilter: "blur(6px)" }}
+      style={{ backgroundColor: "rgba(0,0,0,0.35)" }}
       onClick={(e) => e.target === e.currentTarget && handleClose()}
     >
-      <div
-        className="relative bg-card shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 fade-in duration-300"
-        style={{ border: "1px solid rgba(255,255,255,0.1)" }}
-      >
-        {/* Top gradient banner */}
-        <div
-          className="relative h-28 flex items-center justify-center overflow-hidden"
-          style={{
-            background:
-              "linear-gradient(135deg, var(--diic-dark) 0%, var(--diic-blue) 60%, var(--diic-blue-medium) 100%)",
-          }}
+      <div className="relative bg-white shadow-2xl w-full max-w-sm overflow-hidden animate-in zoom-in-95 fade-in duration-300">
+        {/* Close button */}
+        <button
+          onClick={handleClose}
+          className="absolute top-3 right-3 z-10 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 p-1.5 transition-colors"
+          aria-label="Close"
         >
-          {/* Pattern */}
-          <div className="absolute inset-0 opacity-15">
-            <svg width="100%" height="100%">
-              <defs>
-                <pattern id="modal-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                  <circle cx="10" cy="10" r="1" fill="white" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#modal-dots)" />
-            </svg>
+          <X size={14} />
+        </button>
+
+        {/* Top banner with logo */}
+        <div
+          className="flex flex-col items-center justify-center py-8 px-6 gap-3"
+          style={{ backgroundColor: "var(--diic-blue)" }}
+        >
+          <img
+            src="/logo.jpeg"
+            alt="DIIC Logo"
+            className="h-20 w-20 object-contain bg-white p-1"
+          />
+          <div className="text-center text-white">
+            <div className="font-extrabold text-lg leading-tight">DIIC</div>
+            <div className="text-xs text-blue-200 font-medium">Delhi Innovation & Incubation Centre</div>
           </div>
-          <div className="relative flex items-center gap-3">
-            <img
-              src="/logo.jpeg"
-              alt="DIIC Logo"
-              className="h-16 w-16 object-contain drop-shadow-lg"
-            />
-            <div className="text-white">
-              <div className="font-extrabold text-lg leading-tight">DIIC</div>
-              <div className="text-xs text-blue-200 font-medium">Delhi Innovation &</div>
-              <div className="text-xs text-blue-200 font-medium">Incubation Centre</div>
-            </div>
-          </div>
-          <button
-            onClick={handleClose}
-            className="absolute top-3 right-3 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-1.5 transition-colors"
-            aria-label="Close"
-          >
-            <X size={14} />
-          </button>
         </div>
 
         {/* Content */}
-        <div className="p-6">
-          <h2
-            className="text-xl font-extrabold tracking-tight mb-2 text-center"
-            style={{ color: "var(--diic-dark)" }}
-          >
-            Join Our Innovation Community
-          </h2>
-          <p className="text-sm text-muted-foreground text-center leading-relaxed mb-5">
-            Connect with entrepreneurs, mentors & innovators from Delhi's leading startup ecosystem. Get
-            exclusive updates, opportunities & resources.
-          </p>
-
-          {/* Feature points */}
-          <div className="flex flex-col gap-2.5 mb-5">
-            {[
-              { icon: Users, text: "500+ Members in our Innovation Network" },
-              { icon: Lightbulb, text: "Exclusive startup opportunities & funding alerts" },
-              { icon: MessageCircle, text: "Direct connect with mentors & investors" },
-            ].map((item, i) => {
-              const Icon = item.icon
-              return (
-                <div key={i} className="flex items-center gap-3">
-                  <div
-                    className="w-7 h-7 flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: "var(--diic-blue-light)" }}
-                  >
-                    <Icon size={14} style={{ color: "var(--diic-blue)" }} />
-                  </div>
-                  <span className="text-xs text-foreground/80">{item.text}</span>
-                </div>
-              )
-            })}
+        <div className="p-6 flex flex-col items-center text-center gap-4">
+          <div>
+            <h2 className="text-lg font-extrabold tracking-tight mb-1" style={{ color: "var(--diic-dark)" }}>
+              Join Our WhatsApp Community
+            </h2>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Scan the QR code below to connect with entrepreneurs, mentors & innovators from DIIC.
+            </p>
           </div>
 
-          {/* QR Code Section */}
+          {/* QR Code Placeholder */}
           <div
-            className="p-4 mb-4 text-center"
-            style={{ backgroundColor: "var(--diic-blue-light)" }}
+            className="w-40 h-40 flex items-center justify-center border-2 bg-gray-50"
+            style={{ borderColor: "var(--diic-blue)" }}
           >
-            <div className="flex items-center justify-center gap-4">
-              {/* QR placeholder */}
-              <div
-                className="w-20 h-20 flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: "white", border: "2px solid var(--diic-blue)" }}
-              >
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                  {/* Simplified QR pattern */}
-                  <rect x="5" y="5" width="20" height="20" rx="2" fill="var(--diic-dark)" />
-                  <rect x="9" y="9" width="12" height="12" rx="1" fill="white" />
-                  <rect x="12" y="12" width="6" height="6" fill="var(--diic-dark)" />
-                  <rect x="35" y="5" width="20" height="20" rx="2" fill="var(--diic-dark)" />
-                  <rect x="39" y="9" width="12" height="12" rx="1" fill="white" />
-                  <rect x="42" y="12" width="6" height="6" fill="var(--diic-dark)" />
-                  <rect x="5" y="35" width="20" height="20" rx="2" fill="var(--diic-dark)" />
-                  <rect x="9" y="39" width="12" height="12" rx="1" fill="white" />
-                  <rect x="12" y="42" width="6" height="6" fill="var(--diic-dark)" />
-                  <rect x="35" y="35" width="6" height="6" fill="var(--diic-dark)" />
-                  <rect x="43" y="35" width="6" height="6" fill="var(--diic-dark)" />
-                  <rect x="35" y="43" width="6" height="6" fill="var(--diic-dark)" />
-                  <rect x="43" y="43" width="12" height="12" fill="var(--diic-dark)" />
-                  <rect x="35" y="51" width="6" height="6" fill="var(--diic-dark)" />
-                </svg>
-              </div>
-              <div className="text-left">
-                <div
-                  className="flex items-center gap-1 text-xs font-bold mb-1"
-                  style={{ color: "var(--diic-blue)" }}
-                >
-                  <MessageCircle size={13} />
-                  WhatsApp Community
-                </div>
-                <p className="text-xs text-muted-foreground leading-snug">
-                  Scan the QR code or click the button below to join our WhatsApp innovation community.
-                </p>
-              </div>
-            </div>
+            {/* Replace inner content with a real <img src="your-qr.png" /> when ready */}
+            <svg width="100" height="100" viewBox="0 0 60 60" fill="none">
+              <rect x="5" y="5" width="20" height="20" fill="var(--diic-dark)" />
+              <rect x="9" y="9" width="12" height="12" fill="white" />
+              <rect x="12" y="12" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="35" y="5" width="20" height="20" fill="var(--diic-dark)" />
+              <rect x="39" y="9" width="12" height="12" fill="white" />
+              <rect x="42" y="12" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="5" y="35" width="20" height="20" fill="var(--diic-dark)" />
+              <rect x="9" y="39" width="12" height="12" fill="white" />
+              <rect x="12" y="42" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="35" y="35" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="43" y="35" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="35" y="43" width="6" height="6" fill="var(--diic-dark)" />
+              <rect x="43" y="43" width="12" height="12" fill="var(--diic-dark)" />
+              <rect x="35" y="51" width="6" height="6" fill="var(--diic-dark)" />
+            </svg>
           </div>
 
-          {/* CTAs */}
-          <div className="flex flex-col gap-2">
-            <Button
-              className="w-full font-semibold text-sm"
-              style={{ backgroundColor: "var(--diic-orange)", color: "white" }}
-              onClick={handleClose}
-            >
-              <MessageCircle size={15} className="mr-2" />
-              Join WhatsApp Community
-              <ArrowRight size={14} className="ml-auto" />
-            </Button>
-            <Button variant="ghost" size="sm" className="text-xs text-muted-foreground" onClick={handleClose}>
-              Maybe later
-            </Button>
-          </div>
+          {/* Join Button */}
+          <a
+            href="#"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 text-sm font-bold text-white transition-opacity hover:opacity-90"
+            style={{ backgroundColor: "#25D366" }}
+            onClick={handleClose}
+          >
+            <MessageCircle size={16} />
+            Join WhatsApp Community
+            <ArrowRight size={15} className="ml-auto" />
+          </a>
+
+          <button
+            onClick={handleClose}
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Maybe later
+          </button>
         </div>
       </div>
     </div>
