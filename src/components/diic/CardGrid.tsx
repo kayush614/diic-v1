@@ -90,11 +90,11 @@ const cards = [
 
 export default function CardGrid() {
   return (
-    <section className="py-14 bg-background">
+    <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3 border"
+            className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold mb-3 border"
             style={{
               backgroundColor: "var(--diic-blue-light)",
               color: "var(--diic-blue)",
@@ -123,7 +123,7 @@ export default function CardGrid() {
               <a
                 key={card.title}
                 href={card.href}
-                className="group relative overflow-hidden rounded-xl cursor-pointer flex flex-col"
+                className="group relative overflow-hidden cursor-pointer flex flex-col"
                 style={{ minHeight: "180px" }}
               >
                 {/* Gradient background */}
@@ -146,14 +146,14 @@ export default function CardGrid() {
 
                 {/* Glow effect on hover */}
                 <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl"
+                  className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                   style={{ backgroundColor: "white" }}
                 />
 
                 {/* Content */}
                 <div className="relative flex flex-col h-full p-5">
                   <div
-                    className="flex items-center justify-center w-10 h-10 rounded-lg mb-3 bg-white/15 group-hover:bg-white/25 transition-colors"
+                    className="flex items-center justify-center w-10 h-10 mb-3 bg-white/15 group-hover:bg-white/25 transition-colors"
                   >
                     <Icon size={20} className="text-white" />
                   </div>

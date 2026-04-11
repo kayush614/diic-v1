@@ -30,7 +30,7 @@ export default function WelcomeModal() {
       onClick={(e) => e.target === e.currentTarget && handleClose()}
     >
       <div
-        className="relative bg-card rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 fade-in duration-300"
+        className="relative bg-card shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 fade-in duration-300"
         style={{ border: "1px solid rgba(255,255,255,0.1)" }}
       >
         {/* Top gradient banner */}
@@ -54,7 +54,7 @@ export default function WelcomeModal() {
           </div>
           <div className="relative flex items-center gap-3">
             <img
-              src="/WhatsApp_Image_2026-04-08_at_23.43.21.jpeg"
+              src="/logo.jpeg"
               alt="DIIC Logo"
               className="h-16 w-16 object-contain drop-shadow-lg"
             />
@@ -66,7 +66,7 @@ export default function WelcomeModal() {
           </div>
           <button
             onClick={handleClose}
-            className="absolute top-3 right-3 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-1.5 transition-colors"
+            className="absolute top-3 right-3 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-1.5 transition-colors"
             aria-label="Close"
           >
             <X size={14} />
@@ -97,7 +97,7 @@ export default function WelcomeModal() {
               return (
                 <div key={i} className="flex items-center gap-3">
                   <div
-                    className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
+                    className="w-7 h-7 flex items-center justify-center flex-shrink-0"
                     style={{ backgroundColor: "var(--diic-blue-light)" }}
                   >
                     <Icon size={14} style={{ color: "var(--diic-blue)" }} />
@@ -110,13 +110,13 @@ export default function WelcomeModal() {
 
           {/* QR Code Section */}
           <div
-            className="rounded-xl p-4 mb-4 text-center"
+            className="p-4 mb-4 text-center"
             style={{ backgroundColor: "var(--diic-blue-light)" }}
           >
             <div className="flex items-center justify-center gap-4">
               {/* QR placeholder */}
               <div
-                className="w-20 h-20 rounded-lg flex items-center justify-center flex-shrink-0"
+                className="w-20 h-20 flex items-center justify-center flex-shrink-0"
                 style={{ backgroundColor: "white", border: "2px solid var(--diic-blue)" }}
               >
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none">

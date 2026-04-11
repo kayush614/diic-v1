@@ -1,24 +1,22 @@
 import Header from "@/components/diic/Header"
 import Hero from "@/components/diic/Hero"
 import StatsBar from "@/components/diic/StatsBar"
-import CardGrid from "@/components/diic/CardGrid"
-import EventsAnnouncements from "@/components/diic/EventsAnnouncements"
+import HomeMainGrid from "@/components/diic/HomeMainGrid"
 import WelcomeModal from "@/components/diic/WelcomeModal"
 import SupportedBy from "@/components/diic/SupportedBy"
 import Footer from "@/components/diic/Footer"
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <WelcomeModal />
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <StatsBar />
-        <CardGrid />
-        <EventsAnnouncements />
-        <SupportedBy />
-      </main>
+    <div className="bg-white min-h-screen overflow-x-hidden">
+      <div className="max-w-[1140px] mx-auto bg-white min-h-screen flex flex-col relative">
+        <WelcomeModal />
+        <Header />
+        <main className="flex-1">
+          <Hero />
+          <HomeMainGrid />
+        </main>
+      </div>
       <Footer />
     </div>
   )

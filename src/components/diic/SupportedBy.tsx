@@ -65,7 +65,7 @@ export default function SupportedBy() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3"
+            className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold mb-3"
             style={{ backgroundColor: "var(--diic-blue-light)", color: "var(--diic-blue)" }}
           >
             Our Ecosystem
@@ -87,10 +87,10 @@ export default function SupportedBy() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="group flex flex-col items-center gap-2 p-4 rounded-xl border border-border bg-background hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+              className="group flex flex-col items-center gap-2 p-4 border border-border bg-background hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
             >
               <div
-                className="w-14 h-14 rounded-xl flex items-center justify-center font-extrabold text-sm transition-transform group-hover:scale-105"
+                className="w-14 h-14 flex items-center justify-center font-extrabold text-sm transition-transform group-hover:scale-105"
                 style={{ backgroundColor: partner.bg, color: partner.color }}
               >
                 {partner.short}

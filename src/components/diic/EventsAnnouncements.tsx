@@ -113,14 +113,14 @@ export default function EventsAnnouncements() {
 
         <div className="grid lg:grid-cols-5 gap-6">
           {/* Events Column (3/5) */}
-          <div className="lg:col-span-3 bg-card rounded-2xl shadow-sm border border-border overflow-hidden">
+          <div className="lg:col-span-3 bg-card shadow-sm border border-border overflow-hidden">
             <div
               className="flex items-center justify-between px-6 py-4 border-b"
               style={{ borderColor: "var(--diic-blue-light)" }}
             >
               <div className="flex items-center gap-2.5">
                 <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center"
+                  className="w-8 h-8 flex items-center justify-center"
                   style={{ backgroundColor: "var(--diic-blue-light)" }}
                 >
                   <Calendar size={16} style={{ color: "var(--diic-blue)" }} />
@@ -148,7 +148,7 @@ export default function EventsAnnouncements() {
                   <div className="flex gap-4">
                     {/* Date box */}
                     <div
-                      className="flex-shrink-0 w-14 h-14 rounded-xl flex flex-col items-center justify-center text-white font-bold"
+                      className="flex-shrink-0 w-14 h-14 flex flex-col items-center justify-center text-white font-bold"
                       style={{ background: `linear-gradient(135deg, var(--diic-blue), var(--diic-blue-medium))` }}
                     >
                       <span className="text-lg leading-none">
@@ -213,14 +213,14 @@ export default function EventsAnnouncements() {
           </div>
 
           {/* Announcements Column (2/5) */}
-          <div className="lg:col-span-2 bg-card rounded-2xl shadow-sm border border-border overflow-hidden flex flex-col">
+          <div className="lg:col-span-2 bg-card shadow-sm border border-border overflow-hidden flex flex-col">
             <div
               className="flex items-center justify-between px-6 py-4 border-b"
               style={{ borderColor: "var(--diic-blue-light)" }}
             >
               <div className="flex items-center gap-2.5">
                 <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center"
+                  className="w-8 h-8 flex items-center justify-center"
                   style={{ backgroundColor: "var(--diic-orange-light)" }}
                 >
                   <Bell size={16} style={{ color: "var(--diic-orange)" }} />
@@ -251,12 +251,12 @@ export default function EventsAnnouncements() {
                         <div className="flex-shrink-0 mt-0.5">
                           {item.isNew ? (
                             <span
-                              className="inline-block w-2 h-2 rounded-full animate-pulse"
+                              className="inline-block w-2 h-2 animate-pulse"
                               style={{ backgroundColor: "var(--diic-orange)" }}
                             />
                           ) : (
                             <span
-                              className="inline-block w-2 h-2 rounded-full"
+                              className="inline-block w-2 h-2"
                               style={{ backgroundColor: "var(--diic-blue-light)" }}
                             />
                           )}
@@ -267,7 +267,7 @@ export default function EventsAnnouncements() {
                           </p>
                           <div className="flex items-center gap-2">
                             <span
-                              className="text-[10px] font-semibold px-1.5 py-0.5 rounded-sm"
+                              className="text-[10px] font-semibold px-1.5 py-0.5"
                               style={{ backgroundColor: style.bg, color: style.text }}
                             >
                               {item.type}
@@ -275,7 +275,7 @@ export default function EventsAnnouncements() {
                             <span className="text-[10px] text-muted-foreground">{item.date}</span>
                             {item.isNew && (
                               <span
-                                className="text-[9px] font-bold px-1 rounded"
+                                className="text-[9px] font-bold px-1"
                                 style={{ backgroundColor: "var(--diic-orange)", color: "white" }}
                               >
                                 NEW
