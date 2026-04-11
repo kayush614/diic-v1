@@ -37,17 +37,13 @@ export default function WelcomeModal() {
         {/* Top banner with logo */}
         <div
           className="flex flex-col items-center justify-center py-8 px-6 gap-3"
-          style={{ backgroundColor: "var(--diic-blue)" }}
+          style={{ backgroundColor: "white" }}
         >
           <img
             src="/logo.jpeg"
             alt="DIIC Logo"
-            className="h-20 w-20 object-contain bg-white p-1"
+            className="h-32 w-auto object-contain"
           />
-          <div className="text-center text-white">
-            <div className="font-extrabold text-lg leading-tight">DIIC</div>
-            <div className="text-xs text-blue-200 font-medium">Delhi Innovation & Incubation Centre</div>
-          </div>
         </div>
 
         {/* Content */}
