@@ -103,24 +103,24 @@ export default function Header() {
                 <Menu size={24} />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72 p-0">
-              <SheetHeader className="p-4 pb-2 border-b border-gray-100">
+            <SheetContent side="right" className="w-72 p-0 bg-white text-[#1b4a92]">
+              <SheetHeader className="p-4 pb-2 border-b border-gray-100 bg-white">
                 <SheetTitle className="flex items-center gap-3">
                   <img
                     src="/logo.jpeg"
                     alt="DIIC"
                     className="h-8 w-8 object-contain"
                   />
-                  <span className="text-[#004b87] font-extrabold text-lg">DIIC</span>
+                  <span className="text-[#1b4a92] font-extrabold text-lg">DIIC</span>
                 </SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col py-2 overflow-y-auto">
+              <div className="flex flex-col py-2 overflow-y-auto bg-white">
                 {navLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="text-sm font-bold uppercase tracking-wider py-3 px-5 hover:bg-gray-50 text-[#004b87] transition-colors border-b border-border/40"
+                    className="text-sm font-bold uppercase tracking-wider py-3 px-5 hover:bg-gray-50 text-[#1b4a92] transition-colors border-b border-border/40"
                   >
                     {link.label}
                   </a>
@@ -132,14 +132,14 @@ export default function Header() {
                     Apply for Incubation
                   </Button>
                 </div>
-                <div className="px-5 pb-4 flex flex-col gap-3 mt-2">
-                  <a href="#" className="text-sm font-medium text-gray-500 hover:text-[#004b87]">Home</a>
-                  <a href="#contact" className="text-sm font-medium text-gray-500 hover:text-[#004b87]">Contact Us</a>
+                <div className="px-5 pb-4 flex flex-col gap-3 mt-2 bg-white">
+                  <a href="#" className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Home</a>
+                  <a href="#contact" className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Contact Us</a>
                   
                   <div className="flex items-center gap-4 mt-4 text-gray-500">
-                    <a href="#" aria-label="LinkedIn" className="hover:text-[#004b87]"><LinkedInIcon /></a>
-                    <a href="#" aria-label="Twitter" className="hover:text-[#1DA1F2]"><TwitterXIcon /></a>
-                    <a href="#" aria-label="YouTube" className="hover:text-[#FF0000]"><YoutubeIcon /></a>
+                    <a href="#" aria-label="LinkedIn" className="hover:text-[#1b4a92] transition-colors"><LinkedInIcon /></a>
+                    <a href="#" aria-label="Twitter" className="hover:text-[#1DA1F2] transition-colors"><TwitterXIcon /></a>
+                    <a href="#" aria-label="YouTube" className="hover:text-[#FF0000] transition-colors"><YoutubeIcon /></a>
                   </div>
                 </div>
               </div>
