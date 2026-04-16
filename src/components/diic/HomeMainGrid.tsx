@@ -1,4 +1,5 @@
 import { ChevronRight, Camera, Trophy, Users, CheckSquare, FileText } from "lucide-react"
+import StatsBar from "@/components/diic/StatsBar"
 
 export default function HomeMainGrid() {
   const newsItems = [
@@ -163,6 +164,11 @@ export default function HomeMainGrid() {
           })}
         </div>
 
+      </div>
+      
+      {/* Bottom CTA Section */}
+      <div className="mt-10">
+        <StatsBar />
       </div>
     </section>
   )

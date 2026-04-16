@@ -1,43 +1,61 @@
-import { Rocket, Users, TrendingUp, Award, Building2, Globe } from "lucide-react"
-
-const stats = [
-  { icon: Rocket, value: "50+", label: "Incubated Startups" },
-  { icon: Users, value: "200+", label: "Expert Mentors" },
-  { icon: TrendingUp, value: "₹15Cr+", label: "Funding Raised" },
-  { icon: Award, value: "30+", label: "Awards Won" },
-  { icon: Building2, value: "10,000 sq.ft", label: "Co-working Space" },
-  { icon: Globe, value: "15+", label: "Industry Partners" },
-]
+import { ArrowRight } from "lucide-react"
 
 export default function StatsBar() {
   return (
-    <section
-      className="py-5 border-b"
-      style={{ backgroundColor: "var(--diic-blue)", borderColor: "rgba(255,255,255,0.1)" }}
+    <section 
+      className="relative overflow-hidden py-16 sm:py-24 animate-in fade-in duration-700"
+      style={{ 
+        backgroundColor: "var(--diic-blue)",
+        // Adding a very subtle noise/texture via a soft gradient
+        backgroundImage: "radial-gradient(circle at 20% 30%, rgba(255,255,255,0.03) 0%, transparent 70%)"
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {stats.map((stat, i) => {
-            const Icon = stat.icon
-            return (
-              <div
-                key={i}
-                className="flex flex-col items-center text-center py-2 group cursor-default"
-              >
-                <div
-                  className="flex items-center gap-2 mb-1"
-                >
-                  <Icon
-                    size={16}
-                    className="transition-transform group-hover:scale-110"
-                    style={{ color: "var(--diic-orange)" }}
-                  />
-                  <span className="text-xl font-extrabold text-white leading-none">{stat.value}</span>
-                </div>
-                <span className="text-[11px] text-blue-200 font-medium">{stat.label}</span>
-              </div>
-            )
-          })}
+      {/* Subtle organic shape overlay for "imperfect" feel */}
+      <div 
+        className="absolute -top-24 -right-24 w-96 h-96 opacity-10 rounded-full blur-3xl pointer-events-none"
+        style={{ backgroundColor: "var(--diic-orange)" }}
+      />
+      
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col items-start text-left ml-0 sm:ml-4 lg:ml-8">
+          {/* Main text content - intentionally broken into natural lines with varying sizes */}
+          <div className="space-y-4 mb-10">
+            <h2 className="text-white font-medium flex items-center gap-3 text-2xl sm:text-3xl tracking-tight">
+              <span className="text-3xl">💡</span> Have an idea?
+            </h2>
+            
+            <h2 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl tracking-tight max-w-2xl leading-[1.1]">
+              <span className="text-4xl mr-2">🚀</span> Want to build something <span style={{ color: "var(--diic-orange)" }}>meaningful</span>?
+            </h2>
+            
+            <h2 className="text-blue-100/90 font-medium text-xl sm:text-2xl tracking-tight">
+              <span className="text-2xl mr-2">🤝</span> Looking for collaborators?
+            </h2>
+            
+            <div className="pt-2">
+              <h3 className="text-white font-black text-4xl sm:text-6xl tracking-tighter">
+                <span className="text-4xl mr-3">📩</span> Let’s talk.
+              </h3>
+            </div>
+          </div>
+
+          {/* Buttons - slightly offset from direct vertical center of text */}
+          <div className="flex flex-wrap items-center gap-4 sm:ml-2">
+            <a
+              href="#apply"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 text-sm font-bold uppercase tracking-widest text-white transition-all hover:scale-105 active:scale-95 shadow-lg"
+              style={{ backgroundColor: "var(--diic-orange)" }}
+            >
+              Apply Now <ArrowRight size={16} />
+            </a>
+            
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 text-sm font-bold uppercase tracking-widest text-white transition-all border-2 border-white/20 hover:bg-white/10 hover:border-white/40 active:scale-95"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       </div>
     </section>

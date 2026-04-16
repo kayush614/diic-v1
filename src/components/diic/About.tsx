@@ -10,7 +10,9 @@ import {
   Award,
   Building2,
   Globe,
+  Rocket,
 } from "lucide-react"
+import StatsBar from "@/components/diic/StatsBar"
 
 const offerings = [
   {
@@ -276,36 +278,8 @@ export default function About() {
         </div>
       </div>
 
-      {/* Section 5: Impact Stats */}
-      <div className="py-10" style={{ backgroundColor: "var(--diic-blue)" }}>
-        <div className="max-w-[1140px] mx-auto px-4">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {stats.map((stat, i) => {
-              const Icon = stat.icon
-              return (
-                <div
-                  key={i}
-                  className="flex flex-col items-center text-center py-3 group cursor-default"
-                >
-                  <div className="flex items-center gap-2 mb-1">
-                    <Icon
-                      size={16}
-                      className="transition-transform group-hover:scale-110"
-                      style={{ color: "var(--diic-orange)" }}
-                    />
-                    <span className="text-xl font-extrabold text-white leading-none">
-                      {stat.value}
-                    </span>
-                  </div>
-                  <span className="text-[11px] text-blue-200 font-medium">
-                    {stat.label}
-                  </span>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </div>
+      {/* Section 5: CTA Section (formerly Stats) */}
+      <StatsBar />
     </section>
   )
 }
