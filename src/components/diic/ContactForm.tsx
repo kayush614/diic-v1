@@ -80,7 +80,7 @@ export default function ContactForm() {
   };
 
   const inputBase =
-    "w-full border bg-background text-foreground px-4 py-3 text-sm transition-all focus:outline-none focus:ring-1 placeholder:text-muted-foreground placeholder:opacity-50";
+    "w-full border bg-white text-black px-4 py-3 text-sm transition-all focus:outline-none focus:ring-1 placeholder:text-gray-400 placeholder:opacity-70";
 
   return (
     <div className="flex flex-col gap-6">
