@@ -5,15 +5,21 @@ export default function WelcomeModal() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    // Show on every page load/refresh — no localStorage check
-    const timer = setTimeout(() => {
-      setOpen(true)
-    }, 1200)
-    return () => clearTimeout(timer)
+    // Check if user has seen this modal before
+    const hasSeenModal = localStorage.getItem("diic_welcome_modal_shown")
+    
+    if (!hasSeenModal) {
+      const timer = setTimeout(() => {
+        setOpen(true)
+      }, 1200)
+      return () => clearTimeout(timer)
+    }
   }, [])
 
   const handleClose = () => {
     setOpen(false)
+    // Mark as seen so it doesn't show again
+    localStorage.setItem("diic_welcome_modal_shown", "true")
   }
 
   if (!open) return null

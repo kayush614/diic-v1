@@ -1,12 +1,5 @@
 import { ChevronRight, Camera, Trophy, Users, CheckSquare, FileText } from "lucide-react"
 
-// Helper component for placeholder images
-const PlaceholderImage = ({ text, color = "bg-gray-100" }: { text: string; color?: string }) => (
-  <div className={`w-full h-full flex items-center justify-center ${color} text-gray-400 font-bold uppercase tracking-widest text-xs p-4 text-center`}>
-    {text} <br /> (Image Placeholder)
-  </div>
-)
-
 export default function HomeMainGrid() {
   const newsItems = [
     { id: 1, title: "Test Statement 1", date: "Oct 12, 2023" },
@@ -16,12 +9,13 @@ export default function HomeMainGrid() {
     { id: 5, title: "Test Statement 5", date: "Oct 01, 2023" },
   ]
 
+  // Unified blue-family palette — no more multi-color chaos
   const bottomBlocks = [
-    { label: "Gallery", icon: Camera, color: "var(--diic-blue)", href: "/gallery" },
-    { label: "Careers", icon: Trophy, color: "var(--diic-orange)", href: "/careers" },
-    { label: "Partners", icon: Users, color: "var(--diic-green)", href: "/partners" },
-    { label: "Join Our Network", icon: CheckSquare, color: "#c23934", href: "/join" }, // Red for Join
-    { label: "Resources", icon: FileText, color: "#004b87", href: "/resources" }, // Navy for Resources
+    { label: "Gallery", icon: Camera, href: "#gallery", accent: "var(--diic-blue)" },
+    { label: "Careers", icon: Trophy, href: "#careers", accent: "var(--diic-blue)" },
+    { label: "Partners", icon: Users, href: "#partners", accent: "var(--diic-blue)" },
+    { label: "Join Our Network", icon: CheckSquare, href: "#join", accent: "var(--diic-orange)" },
+    { label: "Resources", icon: FileText, href: "#resources", accent: "var(--diic-blue)" },
   ]
 
   return (
@@ -32,11 +26,19 @@ export default function HomeMainGrid() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           
           {/* Column 1: Incubation (Tall) */}
-          <div className="group relative overflow-hidden h-full min-h-[504px] flex flex-col">
-            <a href="/incubation" className="flex-1 relative block overflow-hidden bg-gray-50">
-              <PlaceholderImage text="Incubation" />
-              {/* Image would go here: <img src="..." /> */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 z-20" style={{ backgroundColor: "var(--diic-blue)" }}>
+          <div className="group relative overflow-hidden h-full min-h-[504px] flex flex-col bg-white shadow-sm border border-gray-100">
+            <a href="#incubation" className="flex-1 relative block overflow-hidden">
+              <img
+                src="/img-incubation.jpg"
+                alt="Incubation"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Gradient scrim for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div
+                className="absolute bottom-0 left-0 right-0 p-5 z-20"
+                style={{ backgroundColor: "var(--diic-blue)" }}
+              >
                 <h3 className="text-xl font-extrabold uppercase tracking-wider text-white">Incubation</h3>
               </div>
             </a>
@@ -45,20 +47,36 @@ export default function HomeMainGrid() {
           {/* Column 2: Events (Top) & Capacity Building (Bottom) */}
           <div className="flex flex-col gap-5">
             {/* Events Block */}
-            <div className="group relative overflow-hidden h-[242px] flex flex-col">
-              <a href="/events" className="flex-1 relative block overflow-hidden bg-gray-50">
-                <div className="absolute top-0 left-0 right-0 p-4 z-20" style={{ backgroundColor: "var(--diic-orange)" }}>
+            <div className="group relative overflow-hidden h-[242px] flex flex-col bg-white shadow-sm border border-gray-100">
+              <a href="#events" className="flex-1 relative block overflow-hidden">
+                <img
+                  src="/img-events.jpg"
+                  alt="Events"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent" />
+                <div
+                  className="absolute top-0 left-0 right-0 p-4 z-20"
+                  style={{ backgroundColor: "var(--diic-blue)" }}
+                >
                   <h3 className="text-[17px] font-extrabold uppercase tracking-wider text-white">Events</h3>
                 </div>
-                <PlaceholderImage text="Events Image" color="bg-gray-50" />
               </a>
             </div>
             
             {/* Capacity Building Block */}
-            <div className="group relative overflow-hidden h-[242px] flex flex-col">
-              <a href="/capacity-building" className="flex-1 relative block overflow-hidden bg-gray-50">
-                <PlaceholderImage text="Capacity Building Image" color="bg-gray-50" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 z-20" style={{ backgroundColor: "var(--diic-green)" }}>
+            <div className="group relative overflow-hidden h-[242px] flex flex-col bg-white shadow-sm border border-gray-100">
+              <a href="#capacity-building" className="flex-1 relative block overflow-hidden">
+                <img
+                  src="/img-capacity-building.jpg"
+                  alt="Capacity Building"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div
+                  className="absolute bottom-0 left-0 right-0 p-4 z-20"
+                  style={{ backgroundColor: "var(--diic-blue)" }}
+                >
                   <h3 className="text-[17px] font-extrabold uppercase tracking-wider text-white">Capacity Building</h3>
                 </div>
               </a>
@@ -67,21 +85,31 @@ export default function HomeMainGrid() {
 
           {/* Column 3: News (Top) & Social Entrepreneurship (Bottom) */}
           <div className="flex flex-col gap-5">
-            {/* News & Announcements (Text-based, no image placeholder needed) */}
-            <div className="text-white flex flex-col h-[340px]" style={{ backgroundColor: "var(--diic-green)" }}>
-              <div className="p-4 border-b border-white/20 flex justify-between items-center">
-                <h3 className="text-lg font-extrabold uppercase tracking-wider">News & Announcement</h3>
-                <a href="/news" className="text-xs font-bold flex items-center gap-1 hover:underline">
+            {/* News & Announcements — clean white card with blue header strip */}
+            <div className="flex flex-col h-[340px] bg-white shadow-sm border border-gray-100">
+              <div
+                className="p-4 flex justify-between items-center"
+                style={{ backgroundColor: "var(--diic-blue)" }}
+              >
+                <h3 className="text-base font-extrabold uppercase tracking-wider text-white">News & Announcement</h3>
+                <a
+                  href="/news"
+                  className="text-xs font-bold flex items-center gap-1 text-white/80 hover:text-white transition-colors"
+                >
                   View all <ChevronRight size={14} />
                 </a>
               </div>
-              <div className="p-4 flex-1 overflow-y-auto custom-scrollbar">
+              <div className="p-4 flex-1 overflow-y-auto">
                 <ul className="space-y-4">
                   {newsItems.map((item) => (
-                    <li key={item.id} className="group border-b border-white/20 pb-3 last:border-0 last:pb-0">
-                      <a href="#" className="flex flex-col gap-1 transition-opacity hover:opacity-80">
-                        <span className="text-sm font-bold leading-tight line-clamp-2">{item.title}</span>
-                        <span className="text-[10px] opacity-70 font-bold">{item.date}</span>
+                    <li key={item.id} className="border-b border-gray-100 pb-3 last:border-0 last:pb-0">
+                      <a href="#" className="flex flex-col gap-1 group">
+                        <span
+                          className="text-sm font-semibold leading-tight line-clamp-2 text-gray-800 group-hover:text-[var(--diic-blue)] transition-colors"
+                        >
+                          {item.title}
+                        </span>
+                        <span className="text-[10px] text-gray-400 font-medium">{item.date}</span>
                       </a>
                     </li>
                   ))}
@@ -90,10 +118,18 @@ export default function HomeMainGrid() {
             </div>
 
             {/* Social Entrepreneurship Block */}
-            <div className="group relative overflow-hidden h-[144px] flex flex-col">
-              <a href="/social-entrepreneurship" className="flex-1 relative block overflow-hidden bg-gray-50">
-                <PlaceholderImage text="Social Entr. Image" color="bg-gray-50" />
-                <div className="absolute bottom-0 left-0 right-0 p-3 z-20" style={{ backgroundColor: "#004b87" }}>
+            <div className="group relative overflow-hidden h-[144px] flex flex-col bg-white shadow-sm border border-gray-100">
+              <a href="#social-entrepreneurship" className="flex-1 relative block overflow-hidden">
+                <img
+                  src="/img-social-entrepreneurship.jpg"
+                  alt="Social Entrepreneurship"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div
+                  className="absolute bottom-0 left-0 right-0 p-3 z-20"
+                  style={{ backgroundColor: "var(--diic-blue)" }}
+                >
                   <h3 className="text-sm font-extrabold uppercase tracking-wider text-white">Social Entrepreneurship</h3>
                 </div>
               </a>
@@ -101,21 +137,25 @@ export default function HomeMainGrid() {
           </div>
         </div>
 
-        {/* Bottom Quick Links Grid (5 Blocks) */}
+        {/* Bottom Quick Links Grid (5 Blocks) — white cards, colored icon accent */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5">
           {bottomBlocks.map((block) => {
             const Icon = block.icon
             return (
-              <a 
-                key={block.label} 
+              <a
+                key={block.label}
                 href={block.href}
-                className="group flex flex-col items-center justify-center gap-3 p-8 transition-transform hover:-translate-y-1 h-[180px]"
-                style={{ backgroundColor: block.color }}
+                className="group flex flex-col items-center justify-center gap-3 p-8 h-[150px] bg-white border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200"
               >
-                <div className="text-white transform transition-transform group-hover:scale-110">
-                  <Icon size={48} strokeWidth={1.5} />
+                <div
+                  className="transform transition-transform group-hover:scale-110"
+                  style={{ color: block.accent }}
+                >
+                  <Icon size={36} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-white text-sm font-extrabold uppercase tracking-wider text-center leading-tight">
+                <h3
+                  className="text-xs font-extrabold uppercase tracking-wider text-center leading-tight text-gray-700 group-hover:text-[var(--diic-blue)] transition-colors"
+                >
                   {block.label}
                 </h3>
               </a>

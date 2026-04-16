@@ -86,13 +86,13 @@ const announcements = [
 ]
 
 const typeBadgeStyle: Record<string, { bg: string; text: string }> = {
-  Applications: { bg: "oklch(0.95 0.07 47)", text: "oklch(0.5 0.17 47)" },
-  Partnership: { bg: "oklch(0.94 0.04 225)", text: "oklch(0.38 0.13 258)" },
+  Applications: { bg: "var(--diic-orange-light)", text: "var(--diic-orange)" },
+  Partnership: { bg: "var(--diic-blue-light)", text: "var(--diic-blue)" },
   Funding: { bg: "oklch(0.94 0.06 155)", text: "oklch(0.42 0.13 155)" },
-  News: { bg: "oklch(0.96 0.02 240)", text: "oklch(0.42 0.07 250)" },
-  Mentorship: { bg: "oklch(0.95 0.05 195)", text: "oklch(0.4 0.12 195)" },
-  Award: { bg: "oklch(0.96 0.06 85)", text: "oklch(0.48 0.13 80)" },
-  Infrastructure: { bg: "oklch(0.95 0.04 240)", text: "oklch(0.42 0.08 248)" },
+  News: { bg: "var(--diic-blue-light)", text: "var(--diic-blue)" },
+  Mentorship: { bg: "var(--diic-blue-light)", text: "var(--diic-blue)" },
+  Award: { bg: "var(--diic-orange-light)", text: "var(--diic-orange)" },
+  Infrastructure: { bg: "var(--diic-blue-light)", text: "var(--diic-blue)" },
 }
 
 export default function EventsAnnouncements() {
@@ -172,14 +172,14 @@ export default function EventsAnnouncements() {
                               event.type === "Hackathon"
                                 ? "oklch(0.94 0.06 155)"
                                 : event.type === "Workshop"
-                                ? "oklch(0.95 0.05 195)"
-                                : "oklch(0.95 0.07 47)",
+                                ? "var(--diic-blue-light)"
+                                : "var(--diic-orange-light)",
                             color:
                               event.type === "Hackathon"
                                 ? "oklch(0.42 0.13 155)"
                                 : event.type === "Workshop"
-                                ? "oklch(0.4 0.12 195)"
-                                : "oklch(0.5 0.17 47)",
+                                ? "var(--diic-blue)"
+                                : "var(--diic-orange)",
                           }}
                         >
                           {event.type}

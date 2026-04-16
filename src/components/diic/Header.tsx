@@ -46,7 +46,7 @@ export default function Header() {
     >
       <div className="max-w-[1140px] mx-auto px-4 py-4 lg:py-5 flex flex-col sm:flex-row items-center sm:justify-between gap-4 sm:gap-0">
         {/* Logo */}
-        <a href="#" className="flex-shrink-0">
+        <a href="#home" className="flex-shrink-0">
           <img
             src="/logo.jpeg"
             alt="DIIC"
@@ -60,7 +60,7 @@ export default function Header() {
           <div className="flex items-center pt-3 relative">
             <div className="absolute -top-3 left-[-40px] right-[-100vw] h-[6px] bg-[#1b4a92]"></div>
             <div className="flex items-center text-[13px] lg:text-[15px] text-gray-500 font-medium">
-              <a href="#" className="hover:text-[#1b4a92] px-2.5 transition-colors">Home</a>
+              <a href="#home" className="hover:text-[#1b4a92] px-2.5 transition-colors">Home</a>
               <span className="text-gray-300">|</span>
               <a href="#contact" className="hover:text-[#1b4a92] px-2.5 transition-colors">Contact Us</a>
               <span className="text-gray-300">|</span>
@@ -133,7 +133,7 @@ export default function Header() {
                   </Button>
                 </div>
                 <div className="px-5 pb-4 flex flex-col gap-3 mt-2 bg-white">
-                  <a href="#" className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Home</a>
+                  <a href="#home" className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Home</a>
                   <a href="#contact" className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Contact Us</a>
                   
                   <div className="flex items-center gap-4 mt-4 text-gray-500">
