@@ -7,7 +7,6 @@ import {
   Eye,
   Target,
 } from "lucide-react";
-import StatsBar from "@/components/diic/StatsBar";
 
 const offerings = [
   {
@@ -254,9 +253,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      {/* Section 5: CTA Section (formerly Stats) */}
-      <StatsBar />
     </section>
   );
 }
