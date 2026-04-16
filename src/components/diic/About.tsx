@@ -6,8 +6,8 @@ import {
   Users,
   Eye,
   Target,
-} from "lucide-react"
-import StatsBar from "@/components/diic/StatsBar"
+} from "lucide-react";
+import StatsBar from "@/components/diic/StatsBar";
 
 const offerings = [
   {
@@ -40,8 +40,7 @@ const offerings = [
     description:
       "Hackathons, demo days, and networking events that build lasting connections in the ecosystem.",
   },
-]
-
+];
 
 export default function About() {
   return (
@@ -68,10 +67,9 @@ export default function About() {
             Ecosystem
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Delhi Innovation and Incubation Centre (DIIC) is a startup
-            incubator established to nurture early-stage ventures and
-            strengthen the innovation ecosystem in the National Capital
-            Region.
+            Delhi Innovation and Incubation Centre (DIIC) is a startup incubator
+            established to nurture early-stage ventures and strengthen the
+            innovation ecosystem in the National Capital Region.
           </p>
         </div>
       </div>
@@ -90,14 +88,14 @@ export default function About() {
               </h3>
               <div className="space-y-4 text-gray-600 text-sm leading-relaxed">
                 <p>
-                  The Delhi Innovation and Incubation Centre (DIIC) is an emerging
-                  initiative aimed at supporting aspiring entrepreneurs, innovators,
-                  and student-led startups.
+                  The Delhi Innovation and Incubation Centre (DIIC) is an
+                  emerging initiative aimed at supporting aspiring
+                  entrepreneurs, innovators, and student-led startups.
                 </p>
                 <p>
-                  As we begin our journey, our focus is on creating a collaborative
-                  space where ideas can be explored, validated, and developed into
-                  meaningful solutions.
+                  As we begin our journey, our focus is on creating a
+                  collaborative space where ideas can be explored, validated,
+                  and developed into meaningful solutions.
                 </p>
                 <p>
                   DIIC aims to provide access to mentorship, peer learning, and
@@ -150,9 +148,8 @@ export default function About() {
               </div>
               <p className="text-gray-600 text-sm leading-relaxed">
                 To be a leading innovation hub that transforms Delhi into a
-                thriving startup capital — where bold ideas find the
-                support, resources, and community they need to create
-                lasting impact.
+                thriving startup capital — where bold ideas find the support,
+                resources, and community they need to create lasting impact.
               </p>
             </div>
 
@@ -163,10 +160,7 @@ export default function About() {
                   className="w-10 h-10 flex items-center justify-center"
                   style={{ backgroundColor: "var(--diic-blue-light)" }}
                 >
-                  <Target
-                    size={20}
-                    style={{ color: "var(--diic-blue)" }}
-                  />
+                  <Target size={20} style={{ color: "var(--diic-blue)" }} />
                 </div>
                 <h3
                   className="text-lg font-bold uppercase tracking-wider"
@@ -176,10 +170,10 @@ export default function About() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed">
-                To provide structured incubation, hands-on mentorship,
-                and access to funding for early-stage startups — enabling
-                founders to build scalable, sustainable ventures that
-                solve real problems.
+                To provide structured incubation, hands-on mentorship, and
+                access to funding for early-stage startups — enabling founders
+                to build scalable, sustainable ventures that solve real
+                problems.
               </p>
             </div>
           </div>
@@ -194,18 +188,17 @@ export default function About() {
               className="text-2xl sm:text-3xl font-extrabold tracking-tight"
               style={{ color: "var(--diic-dark)" }}
             >
-              What We{" "}
-              <span style={{ color: "var(--diic-orange)" }}>Do</span>
+              What We <span style={{ color: "var(--diic-orange)" }}>Do</span>
             </h2>
             <p className="mt-2 text-gray-500 text-sm max-w-xl mx-auto">
-              A complete support system for startups at every stage of
-              their journey.
+              A complete support system for startups at every stage of their
+              journey.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {offerings.map((item) => {
-              const Icon = item.icon
+              const Icon = item.icon;
               return (
                 <div
                   key={item.title}
@@ -218,10 +211,7 @@ export default function About() {
                         backgroundColor: "var(--diic-blue-light)",
                       }}
                     >
-                      <Icon
-                        size={20}
-                        style={{ color: "var(--diic-blue)" }}
-                      />
+                      <Icon size={20} style={{ color: "var(--diic-blue)" }} />
                     </div>
                     <div>
                       <h4
@@ -236,7 +226,7 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
 
             {/* CTA card */}
@@ -268,5 +258,5 @@ export default function About() {
       {/* Section 5: CTA Section (formerly Stats) */}
       <StatsBar />
     </section>
-  )
+  );
 }
