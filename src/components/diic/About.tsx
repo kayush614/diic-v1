@@ -6,11 +6,6 @@ import {
   Users,
   Eye,
   Target,
-  Rocket,
-  Award,
-  Building2,
-  Globe,
-  Rocket,
 } from "lucide-react"
 import StatsBar from "@/components/diic/StatsBar"
 
@@ -47,14 +42,6 @@ const offerings = [
   },
 ]
 
-const stats = [
-  { value: "50+", label: "Startups Incubated", icon: Rocket },
-  { value: "200+", label: "Expert Mentors", icon: Users },
-  { value: "₹15Cr+", label: "Funding Facilitated", icon: TrendingUp },
-  { value: "30+", label: "Awards & Recognitions", icon: Award },
-  { value: "10,000 sq.ft", label: "Co-working Space", icon: Building2 },
-  { value: "15+", label: "Industry Partners", icon: Globe },
-]
 
 export default function About() {
   return (

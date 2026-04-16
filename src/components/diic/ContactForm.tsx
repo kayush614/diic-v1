@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { supabase } from "@/lib/supabaseClient"
-import { Send, CheckCircle, AlertCircle } from "lucide-react"
+import { CheckCircle, AlertCircle } from "lucide-react"
 
 interface FormData {
   name: string
