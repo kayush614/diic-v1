@@ -75,17 +75,17 @@ export default function About() {
 
       {/* Section 2: Description + Image (Two Column) */}
       <div style={{ backgroundColor: "oklch(0.97 0.005 240)" }}>
-        <div className="max-w-[1140px] mx-auto px-4 py-14">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-[1140px] mx-auto px-4 py-20">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Left — Description */}
-            <div>
+            <div className="pr-6">
               <h3
-                className="text-xl sm:text-2xl font-bold mb-5 leading-snug"
+                className="text-2xl sm:text-3xl font-bold mb-8 leading-snug"
                 style={{ color: "var(--diic-dark)" }}
               >
                 Empowering ideas with the right environment to grow.
               </h3>
-              <div className="space-y-4 text-gray-600 text-sm leading-relaxed">
+              <div className="space-y-6 text-gray-600 text-base leading-relaxed">
                 <p>
                   The Delhi Innovation and Incubation Centre (DIIC) is an
                   emerging initiative aimed at supporting aspiring
