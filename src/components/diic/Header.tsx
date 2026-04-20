@@ -41,17 +41,21 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header
-      className="sticky top-0 z-50 bg-white"
-    >
+    <header className="sticky top-0 z-50 bg-white">
       <div className="max-w-[1140px] mx-auto px-4 py-4 lg:py-5 flex flex-col sm:flex-row items-center sm:justify-between gap-4 sm:gap-0">
-        {/* Logo */}
-        <a href="#home" className="flex-shrink-0">
+        {/* Logo + Name */}
+        <a href="#home" className="flex-shrink-0 flex items-center gap-4">
           <img
-            src="/logo.jpeg"
+            src="/logo.jpg"
             alt="DIIC"
             className="h-28 w-auto lg:h-32 object-contain object-left"
           />
+          {/* Institution Name */}
+          <div className="hidden sm:flex flex-col justify-center gap-1.5 ml-1">
+            <span className="text-[36px] lg:text-[42px] font-black text-[#1b4a92] leading-none tracking-tight">DIIC</span>
+            <div className="w-8 h-[3px] rounded-full bg-[#f26e21]" />
+            <span className="text-[11px] lg:text-[12.5px] font-medium text-gray-500 tracking-[0.12em] uppercase">Delhi Innovation and Incubation Centre</span>
+          </div>
         </a>
 
         {/* Navigation - Desktop */}
@@ -69,7 +73,7 @@ export default function Header() {
               <div className="flex items-center pl-2.5 gap-2">
                 <span>Follow us on</span>
                 <div className="flex items-center gap-1.5 text-gray-400">
-                  <a href="#" aria-label="LinkedIn" className="hover:text-[#1b4a92] transition-colors"><LinkedInIcon /></a>
+                  <a href="https://www.linkedin.com/company/delhi-innovation-and-incubation-centre/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[#1b4a92] transition-colors"><LinkedInIcon /></a>
                   <a href="#" aria-label="Twitter" className="hover:text-[#1DA1F2] transition-colors"><TwitterXIcon /></a>
                   <a href="#" aria-label="YouTube" className="hover:text-[#FF0000] transition-colors"><YoutubeIcon /></a>
                 </div>
@@ -107,7 +111,7 @@ export default function Header() {
               <SheetHeader className="p-4 pb-2 border-b border-gray-100 bg-white">
                 <SheetTitle className="flex items-center gap-3">
                   <img
-                    src="/logo.jpeg"
+                    src="/logo.jpg"
                     alt="DIIC"
                     className="h-8 w-8 object-contain"
                   />
@@ -137,7 +141,7 @@ export default function Header() {
                   <a href="#contact" className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Contact Us</a>
                   
                   <div className="flex items-center gap-4 mt-4 text-gray-500">
-                    <a href="#" aria-label="LinkedIn" className="hover:text-[#1b4a92] transition-colors"><LinkedInIcon /></a>
+                    <a href="https://www.linkedin.com/company/delhi-innovation-and-incubation-centre/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[#1b4a92] transition-colors"><LinkedInIcon /></a>
                     <a href="#" aria-label="Twitter" className="hover:text-[#1DA1F2] transition-colors"><TwitterXIcon /></a>
                     <a href="#" aria-label="YouTube" className="hover:text-[#FF0000] transition-colors"><YoutubeIcon /></a>
                   </div>

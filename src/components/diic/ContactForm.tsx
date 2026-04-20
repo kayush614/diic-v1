@@ -121,7 +121,7 @@ export default function ContactForm() {
           <div className="text-sm">
             <p className="font-bold">Submission failed</p>
             <p className="opacity-90">
-              Please try again or email us at hello@innovationcentre.io.
+              Please try again or email us at contact@diic.co.in.
             </p>
           </div>
         </div>

@@ -1,32 +1,23 @@
-import { MapPin, Mail, Phone, Clock } from "lucide-react"
+import { MapPin, Mail, Phone } from "lucide-react"
 
 const contactDetails = [
   {
-    icon: MapPin,
-    label: "Address",
-    lines: [
-      "123 Innovation Way",
-      "Tech City, Digital State",
-      "United States – 94043",
-    ],
-  },
+     icon: MapPin,
+     label: "Address",
+     lines: [
+       "D-95",
+       "Sector-105",
+       "Noida, Uttar Pradesh",
+       "Pin : 201304",
+     ],
+   },
   {
     icon: Mail,
     label: "Email",
-    lines: ["hello@innovationcentre.io"],
-    href: "mailto:hello@innovationcentre.io",
+    lines: ["contact@diic.co.in"],
+    href: "mailto:contact@diic.co.in",
   },
-  {
-    icon: Phone,
-    label: "Phone",
-    lines: ["+1 (555) 123-4567"],
-    href: "tel:+15551234567",
-  },
-  {
-    icon: Clock,
-    label: "Working Hours",
-    lines: ["Monday – Friday: 9:00 AM – 6:00 PM", "Saturday: 11:00 AM – 3:00 PM", "Sunday: Closed"],
-  },
+
 ]
 
 export default function ContactInfo() {
@@ -76,7 +67,7 @@ export default function ContactInfo() {
       <div className="mt-4 rounded border border-gray-100 overflow-hidden shadow-sm">
         <iframe
           title="Innovation Centre Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.639290622367!2d-122.0837468!3d37.4219999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbba393d6b797%3A0x6b4904533da8020d!2sGoogleplex!5e0!3m2!1sen!2sus!4v1713243200000!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.606283286576!2d77.3734674!3d28.5513511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f16e45f3df%3A0x67396a8697666249!2sD-95%2C%20Sector%20105%2C%20Noida%2C%20Uttar%20Pradesh%20201304!5e0!3m2!1sen!2sin!4v1713596160123!5m2!1sen!2sin"
           width="100%"
           height="200"
           style={{ border: 0, filter: "grayscale(10%) contrast(90%)" }}

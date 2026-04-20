@@ -46,7 +46,7 @@ export default function WelcomeModal() {
           style={{ backgroundColor: "white" }}
         >
           <img
-            src="/logo.jpeg"
+            src="/logo.jpg"
             alt="DIIC Logo"
             className="h-32 w-auto object-contain"
           />
