@@ -1,10 +1,8 @@
 import {
   Heart,
-  Globe,
   Leaf,
   Users,
   TrendingUp,
-  Target,
   ArrowRight,
   CheckCircle2,
   Handshake,

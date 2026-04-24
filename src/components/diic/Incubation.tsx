@@ -239,7 +239,7 @@ export default function Incubation() {
               style={{ backgroundColor: "var(--diic-blue-light)" }}
             />
             <div className="space-y-6">
-              {phases.map((phase, i) => (
+              {phases.map((phase) => (
                 <div
                   key={phase.step}
                   className="relative flex gap-6 sm:gap-8 items-start"

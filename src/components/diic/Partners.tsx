@@ -1,12 +1,9 @@
 import {
-  Users,
   Building2,
   Handshake,
   Globe,
   ArrowRight,
   ShieldCheck,
-  TrendingUp,
-  Cpu,
 } from "lucide-react";
 
 const partnerTypes = [
@@ -32,12 +29,7 @@ const partnerTypes = [
   },
 ];
 
-const partners = [
-  { name: "Government of Delhi", logo: "/logos/delhi-gov.png", type: "Government" },
-  { name: "Industry Lead Alpha", logo: "/logos/industry-alpha.png", type: "Industry" },
-  { name: "Innovation Hub Beta", logo: "/logos/hub-beta.png", type: "Ecosystem" },
-  { name: "Tech University Gamma", logo: "/logos/uni-gamma.png", type: "Academic" },
-];
+
 
 export default function Partners() {
   return (

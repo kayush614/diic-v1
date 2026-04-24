@@ -365,7 +365,6 @@ export default function JoinNetwork() {
                       className="w-full px-4 py-2.5 border text-sm text-gray-800 focus:outline-none focus:ring-2 transition-shadow bg-white"
                       style={{
                         borderColor: errors.full_name ? "#ef4444" : "#e5e7eb",
-                        focusRingColor: "var(--diic-blue)",
                       }}
                     />
                     {errors.full_name && (
