@@ -13,35 +13,15 @@ import { Separator } from "@/components/ui/separator";
 import { useAnnouncements } from "@/hooks/useAnnouncements";
 import { format } from "date-fns";
 
-const events = [
-  {
-    id: 1,
-    title: "Startup Pitch Day 2025",
-    date: "April 25, 2025",
-    time: "10:00 AM – 5:00 PM",
-    location: "DIIC Innovation Hub, New Delhi",
-    type: "Pitch Competition",
-    color: "var(--diic-orange)",
-  },
-  {
-    id: 2,
-    title: "Women Entrepreneurship Workshop",
-    date: "May 3, 2025",
-    time: "2:00 PM – 6:00 PM",
-    location: "Online + Offline",
-    type: "Workshop",
-    color: "var(--diic-teal)",
-  },
-  {
-    id: 3,
-    title: "Smart Delhi Hackathon 2025",
-    date: "May 15-17, 2025",
-    time: "48-Hour Hackathon",
-    location: "DIIC Campus, New Delhi",
-    type: "Hackathon",
-    color: "var(--diic-green)",
-  },
-];
+const events: Array<{
+  id: number;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  type: string;
+  color: string;
+}> = [];
 
 export default function EventsAnnouncements() {
   const { announcements, loading, error } = useAnnouncements();
@@ -101,67 +81,74 @@ export default function EventsAnnouncements() {
             </div>
 
             <div className="divide-y divide-border">
-              {events.map((event) => (
-                <div
-                  key={event.id}
-                  className="group p-5 hover:bg-muted/40 transition-colors cursor-pointer"
-                >
-                  <div className="flex gap-4">
-                    {/* Date box */}
-                    <div
-                      className="flex-shrink-0 w-14 h-14 flex flex-col items-center justify-center text-white font-bold"
-                      style={{
-                        background: `linear-gradient(135deg, var(--diic-blue), var(--diic-blue-medium))`,
-                      }}
-                    >
-                      <span className="text-lg leading-none">
-                        {event.date.split(" ")[1]?.replace(",", "")}
-                      </span>
-                      <span className="text-[10px] opacity-80">
-                        {event.date.split(" ")[0]?.slice(0, 3)}
-                      </span>
-                    </div>
-
-                    {/* Event info */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between gap-2 mb-1">
-                        <h4 className="font-semibold text-sm leading-snug group-hover:text-[var(--diic-blue)] transition-colors line-clamp-2">
-                          {event.title}
-                        </h4>
-                        <Badge
-                          className="flex-shrink-0 text-[10px] font-semibold px-2 py-0.5 border-0"
-                          style={{
-                            backgroundColor:
-                              event.type === "Hackathon"
-                                ? "oklch(0.94 0.06 155)"
-                                : event.type === "Workshop"
-                                  ? "var(--diic-blue-light)"
-                                  : "var(--diic-orange-light)",
-                            color:
-                              event.type === "Hackathon"
-                                ? "oklch(0.42 0.13 155)"
-                                : event.type === "Workshop"
-                                  ? "var(--diic-blue)"
-                                  : "var(--diic-orange)",
-                          }}
-                        >
-                          {event.type}
-                        </Badge>
+              {events.length === 0 ? (
+                <div className="p-8 text-center text-gray-500">
+                  <p className="text-sm">We are currently curating our upcoming lineup of events.</p>
+                  <p className="text-sm font-semibold mt-1">Stay tuned!</p>
+                </div>
+              ) : (
+                events.map((event) => (
+                  <div
+                    key={event.id}
+                    className="group p-5 hover:bg-muted/40 transition-colors cursor-pointer"
+                  >
+                    <div className="flex gap-4">
+                      {/* Date box */}
+                      <div
+                        className="flex-shrink-0 w-14 h-14 flex flex-col items-center justify-center text-white font-bold"
+                        style={{
+                          background: `linear-gradient(135deg, var(--diic-blue), var(--diic-blue-medium))`,
+                        }}
+                      >
+                        <span className="text-lg leading-none">
+                          {event.date.split(" ")[1]?.replace(",", "")}
+                        </span>
+                        <span className="text-[10px] opacity-80">
+                          {event.date.split(" ")[0]?.slice(0, 3)}
+                        </span>
                       </div>
-                      <div className="flex flex-wrap gap-3 text-[11px] text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <Clock size={10} />
-                          {event.time}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <MapPin size={10} />
-                          {event.location}
-                        </span>
+
+                      {/* Event info */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between gap-2 mb-1">
+                          <h4 className="font-semibold text-sm leading-snug group-hover:text-[var(--diic-blue)] transition-colors line-clamp-2">
+                            {event.title}
+                          </h4>
+                          <Badge
+                            className="flex-shrink-0 text-[10px] font-semibold px-2 py-0.5 border-0"
+                            style={{
+                              backgroundColor:
+                                event.type === "Hackathon"
+                                  ? "oklch(0.94 0.06 155)"
+                                  : event.type === "Workshop"
+                                    ? "var(--diic-blue-light)"
+                                    : "var(--diic-orange-light)",
+                              color:
+                                event.type === "Hackathon"
+                                  ? "oklch(0.42 0.13 155)"
+                                  : event.type === "Workshop"
+                                    ? "var(--diic-blue)"
+                                    : "var(--diic-orange)",
+                            }}
+                          >
+                            {event.type}
+                          </Badge>
+                        </div>
+                        <div className="flex flex-wrap gap-3 text-[11px] text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Clock size={10} />
+                            {event.time}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <MapPin size={10} />
+                            {event.location}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))
+              )}
             </div>
 
             <div className="p-5 border-t">
