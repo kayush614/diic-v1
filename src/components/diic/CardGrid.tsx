@@ -32,7 +32,7 @@ const cards = [
   },
   {
     title: "Mentors",
-    description: "Connect with 200+ expert mentors from industry, academia & government.",
+    description: "Connect with experienced mentors from industry and academia to guide your journey.",
     icon: Users,
     href: "#mentors",
   },

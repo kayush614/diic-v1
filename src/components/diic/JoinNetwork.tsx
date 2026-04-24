@@ -207,10 +207,10 @@ export default function JoinNetwork() {
       >
         <div className="max-w-[1140px] mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           {[
-            { value: "200+", label: "Active Mentors" },
-            { value: "50+", label: "Investor Partners" },
-            { value: "30+", label: "Corporate Partners" },
-            { value: "1000+", label: "Network Members" },
+            { value: "Expert", label: "Mentorship" },
+            { value: "Open", label: "to Partnerships" },
+            { value: "Growing", label: "Community" },
+            { value: "Dynamic", label: "Ecosystem" },
           ].map((s) => (
             <div key={s.label}>
               <div

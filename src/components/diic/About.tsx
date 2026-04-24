@@ -25,7 +25,7 @@ const offerings = [
     icon: Handshake,
     title: "Mentorship Network",
     description:
-      "Access to 200+ mentors from industry, academia, and government to guide your journey.",
+      "Access to experienced mentors from industry and academia who guide your journey and help navigate entrepreneurial challenges.",
   },
   {
     icon: TrendingUp,

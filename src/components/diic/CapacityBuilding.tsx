@@ -102,10 +102,10 @@ const upcoming = [
 ];
 
 const stats = [
-  { value: "50+", label: "Sessions Per Year" },
-  { value: "2000+", label: "Participants Trained" },
-  { value: "100+", label: "Expert Speakers" },
-  { value: "95%", label: "Satisfaction Rate" },
+  { value: "Diverse", label: "Workshop Series" },
+  { value: "Hands-On", label: "Learning" },
+  { value: "Expert", label: "Facilitation" },
+  { value: "High", label: "Engagement" },
 ];
 
 export default function CapacityBuilding() {
@@ -381,7 +381,7 @@ export default function CapacityBuilding() {
                   {
                     icon: Target,
                     title: "Community Access",
-                    desc: "Join a growing alumni network of 2000+ trained entrepreneurs across Delhi-NCR.",
+                    desc: "Join our growing community of entrepreneurs and build lasting connections within the ecosystem.",
                   },
                 ].map((item) => {
                   const Icon = item.icon;

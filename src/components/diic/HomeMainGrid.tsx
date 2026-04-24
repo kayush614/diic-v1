@@ -23,10 +23,10 @@ export default function HomeMainGrid() {
   const newsItems =
     !loading && !error && announcements && announcements.length > 0
       ? announcements.slice(0, 4).map((a) => ({
-          id: a.id,
-          title: a.title,
-          date: format(new Date(a.created_at), "MMM dd, yyyy"),
-        }))
+        id: a.id,
+        title: a.title,
+        date: format(new Date(a.created_at), "MMM dd, yyyy"),
+      }))
       : fallbackNewsItems;
 
   // Unified blue-family palette — no more multi-color chaos
@@ -75,7 +75,7 @@ export default function HomeMainGrid() {
               className="flex-1 relative block overflow-hidden"
             >
               <img
-                src="/img-incubation.jpg"
+                src="/img-incubation.png"
                 alt="Incubation"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -101,7 +101,7 @@ export default function HomeMainGrid() {
                 className="flex-1 relative block overflow-hidden"
               >
                 <img
-                  src="/img-events.jpg"
+                  src="/img-events.png"
                   alt="Events"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -124,7 +124,7 @@ export default function HomeMainGrid() {
                 className="flex-1 relative block overflow-hidden"
               >
                 <img
-                  src="/img-capacity-building.jpg"
+                  src="/img-capacity-building-new.png"
                   alt="Capacity Building"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -187,7 +187,7 @@ export default function HomeMainGrid() {
                 className="flex-1 relative block overflow-hidden"
               >
                 <img
-                  src="/img-social-entrepreneurship.jpg"
+                  src="/img-social-entrepreneurship.png"
                   alt="Social Entrepreneurship"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

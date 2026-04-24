@@ -70,10 +70,10 @@ export default function Partners() {
       <div style={{ backgroundColor: "var(--diic-dark)" }}>
         <div className="max-w-[1140px] mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { value: "50+", label: "Industry Partners" },
-            { value: "12+", label: "Academic Alliances" },
-            { value: "05+", label: "Govt. Departments" },
-            { value: "25+", label: "Ecosystem Enablers" },
+            { value: "Growing", label: "Partner Network" },
+            { value: "Strong", label: "Academic Ties" },
+            { value: "Open", label: "to Collaboration" },
+            { value: "Committed", label: "Supporters" },
           ].map((s) => (
             <div key={s.label}>
               <div className="text-2xl font-extrabold" style={{ color: "var(--diic-orange)" }}>
