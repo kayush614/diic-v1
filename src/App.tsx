@@ -9,18 +9,20 @@ import ComingSoon from "@/components/diic/ComingSoon"
 import WelcomeModal from "@/components/diic/WelcomeModal"
 import Footer from "@/components/diic/Footer"
 
+// New Pages
+import JoinNetwork from "@/components/diic/JoinNetwork"
+import Programs from "@/components/diic/Programs"
+import Events from "@/components/diic/Events"
+import Incubation from "@/components/diic/Incubation"
+import CapacityBuilding from "@/components/diic/CapacityBuilding"
+import SocialEntrepreneurship from "@/components/diic/SocialEntrepreneurship"
+import Partners from "@/components/diic/Partners"
+
 // All hash → page config in one place
 const COMING_SOON_ROUTES: Record<string, { title: string; description?: string }> = {
   "#gallery":     { title: "Gallery",           description: "We're curating highlights from our events, workshops, and startup milestones. Our gallery is coming soon." },
   "#careers":     { title: "Careers",           description: "We'll be posting fellowship, internship, and full-time opportunities here. Stay tuned and check back soon." },
-  "#partners":    { title: "Partners",           description: "A full directory of our industry, government, and academic partners is on its way. Watch this space." },
-  "#join":        { title: "Join Our Network",  description: "Our network portal is under construction. You'll be able to register as a mentor, investor, or ecosystem partner here." },
   "#resources":   { title: "Resources",          description: "Handbooks, toolkits, and startup guides are being compiled for you. Coming very soon." },
-  "#programs":    { title: "Programs",           description: "A detailed breakdown of all our incubation and capacity-building programs is on the way." },
-  "#events":      { title: "Events",             description: "Our events calendar, registrations, and past event highlights will be available here soon." },
-  "#incubation":  { title: "Incubation",         description: "Full details about our incubation cohorts, process, and how to apply are coming soon." },
-  "#capacity-building": { title: "Capacity Building", description: "Workshops, bootcamps, and training schedules will be listed here once we launch this section." },
-  "#social-entrepreneurship": { title: "Social Entrepreneurship", description: "Learn about our social impact programs and how we support purpose-driven startups. Section launching soon." },
 }
 
 function useHashRoute() {
@@ -60,6 +62,20 @@ export default function App() {
               <About />
             ) : isContact ? (
               <Contact />
+            ) : route === "#join" ? (
+              <JoinNetwork />
+            ) : route === "#programs" ? (
+              <Programs />
+            ) : route === "#events" ? (
+              <Events />
+            ) : route === "#incubation" ? (
+              <Incubation />
+            ) : route === "#capacity-building" ? (
+              <CapacityBuilding />
+            ) : route === "#social-entrepreneurship" ? (
+              <SocialEntrepreneurship />
+            ) : route === "#partners" ? (
+              <Partners />
             ) : comingSoon ? (
               <ComingSoon title={comingSoon.title} description={comingSoon.description} />
             ) : (

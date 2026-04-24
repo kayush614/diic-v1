@@ -436,9 +436,3 @@ export default function Programs() {
     </section>
   );
 }
-          </a >
-        </div >
-      </div >
-    </section >
-  );
-}
