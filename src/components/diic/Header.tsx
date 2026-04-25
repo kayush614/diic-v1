@@ -44,15 +44,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white">
       <div className="max-w-[1140px] mx-auto px-4 py-3 lg:py-5 flex flex-row items-center justify-between gap-3 sm:gap-0">
         {/* Logo + Name */}
-        <a href="#home" className="flex-shrink-0 flex items-center gap-4">
+        <a href="#home" className="min-w-0 flex items-center gap-2 sm:gap-4 overflow-hidden">
           <img
             src="/logo.jpg"
             alt="DIIC"
-            className="h-16 w-auto sm:h-28 lg:h-32 object-contain object-left"
+            className="h-12 w-auto sm:h-28 lg:h-32 flex-shrink-0 object-contain object-left"
           />
           {/* Institution Name */}
-          <div className="flex flex-col justify-center gap-1.5 ml-1">
-            <span className="text-[13px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#e84c1e] leading-snug tracking-tight whitespace-nowrap">Delhi Innovation and Incubation Centre</span>
+          <div className="flex flex-col justify-center gap-1 ml-1 min-w-0">
+            <span className="text-[11px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#e84c1e] leading-snug tracking-tight sm:whitespace-nowrap">Delhi Innovation and Incubation Centre</span>
             <div className="w-6 sm:w-8 h-[2px] sm:h-[3px] rounded-full bg-[#f26e21]" />
           </div>
         </a>
