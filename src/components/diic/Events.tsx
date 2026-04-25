@@ -72,7 +72,7 @@ const highlights = [
   {
     icon: Users,
     title: "Community Events",
-    desc: "Networking nights and founder meetups across Delhi-NCR.",
+    desc: "Networking nights and founder meetups for our community.",
   },
 ];
 
