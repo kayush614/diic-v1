@@ -44,16 +44,16 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white">
       <div className="max-w-[1140px] mx-auto px-4 py-3 lg:py-5 flex flex-row items-center justify-between gap-3 sm:gap-0">
         {/* Logo + Name */}
-        <a href="#home" className="min-w-0 flex items-center gap-2 sm:gap-4 overflow-hidden">
+        <a href="#home" className="flex-1 sm:flex-none min-w-0 flex items-center gap-1 sm:gap-4 overflow-hidden">
           <img
             src="/logo.jpg"
             alt="DIIC"
-            className="h-12 w-auto sm:h-28 lg:h-32 flex-shrink-0 object-contain object-left"
+            className="h-11 w-auto sm:h-28 lg:h-32 flex-shrink-0 object-contain object-left"
             style={{ clipPath: 'inset(0 0 1.5% 0)' }}
           />
           {/* Institution Name */}
-          <div className="flex flex-col justify-center gap-1 ml-1 min-w-0">
-            <span className="text-[14px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#e84c1e] leading-tight sm:leading-snug tracking-tight sm:whitespace-nowrap text-balance sm:text-auto">Delhi Innovation and Incubation Centre</span>
+          <div className="flex-1 sm:flex-none flex flex-col justify-center items-center sm:items-start ml-1 sm:ml-0 min-w-0 pr-2 sm:pr-0">
+            <span className="text-[10px] min-[375px]:text-[11px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#e84c1e] leading-tight sm:leading-snug tracking-tight whitespace-nowrap">Delhi Innovation and Incubation Centre</span>
           </div>
         </a>
 
@@ -79,7 +79,7 @@ export default function Header() {
               </div>
             </div>
           </div>
- 
+
           {/* Main Nav Row */}
           <div className="flex items-center justify-end flex-wrap gap-x-2 gap-y-3 mt-1">
             {navLinks.map((link) => (
@@ -143,7 +143,7 @@ export default function Header() {
                 <div className="px-5 pb-4 flex flex-col gap-3 mt-2 bg-white">
                   <a href="#home" onClick={() => setMobileOpen(false)} className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Home</a>
                   <a href="#contact" onClick={() => setMobileOpen(false)} className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Contact Us</a>
-                  
+
                   <div className="flex items-center gap-4 mt-4 text-gray-500">
                     <a href="https://www.linkedin.com/company/delhi-innovation-and-incubation-centre/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[#1b4a92] transition-colors"><LinkedInIcon /></a>
                     <a href="#" aria-label="Twitter" className="hover:text-[#1DA1F2] transition-colors"><TwitterXIcon /></a>
