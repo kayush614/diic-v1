@@ -190,12 +190,12 @@ export default function JoinNetwork() {
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
           Be Part of{" "}
-          <span style={{ color: "var(--diic-orange)" }}>Delhi's</span> Startup
+          <span style={{ color: "var(--diic-orange)" }}>a Thriving</span> Startup
           Ecosystem
         </h1>
         <p className="text-blue-100/80 text-sm max-w-xl mx-auto leading-relaxed">
           Whether you're a mentor, investor, corporate partner, or ecosystem
-          builder — DIIC's network is where Delhi's brightest connect,
+          builder — DIIC's network is where the brightest connect,
           collaborate, and create impact.
         </p>
       </div>

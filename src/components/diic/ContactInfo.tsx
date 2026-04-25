@@ -63,20 +63,7 @@ export default function ContactInfo() {
         ))}
       </div>
 
-      {/* Google Maps Embed - Simple Border */}
-      <div className="mt-4 rounded border border-gray-100 overflow-hidden shadow-sm">
-        <iframe
-          title="Innovation Centre Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.606283286576!2d77.3734674!3d28.5513511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f16e45f3df%3A0x67396a8697666249!2sD-95%2C%20Sector%20105%2C%20Noida%2C%20Uttar%20Pradesh%20201304!5e0!3m2!1sen!2sin!4v1713596160123!5m2!1sen!2sin"
-          width="100%"
-          height="200"
-          style={{ border: 0, filter: "grayscale(10%) contrast(90%)" }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="w-full"
-        />
-      </div>
+
     </div>
   )
 }

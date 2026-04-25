@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-[1140px] mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-4">
         {/* Copyright */}
         <div className="text-[11px] lg:text-[12px] text-white/90 font-medium whitespace-nowrap">
-          © {currentYear} Delhi Innovation and Incubation Centre. All rights reserved.
+          © {currentYear} Innovation and Incubation Centre. All rights reserved.
         </div>
 
         {/* Links */}

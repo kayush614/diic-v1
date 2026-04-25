@@ -61,14 +61,14 @@ export default function About() {
             className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4"
             style={{ color: "var(--diic-dark)" }}
           >
-            Building Delhi's{" "}
+            Building a Thriving{" "}
             <span style={{ color: "var(--diic-orange)" }}>Innovation</span>{" "}
             Ecosystem
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Delhi Innovation and Incubation Centre (DIIC) is a startup incubator
+            The Innovation and Incubation Centre (DIIC) is a startup incubator
             established to nurture early-stage ventures and strengthen the
-            innovation ecosystem in the National Capital Region.
+            innovation ecosystem.
           </p>
         </div>
       </div>
@@ -87,7 +87,7 @@ export default function About() {
               </h3>
               <div className="space-y-6 text-gray-600 text-base leading-relaxed">
                 <p>
-                  The Delhi Innovation and Incubation Centre (DIIC) is an
+                  The Innovation and Incubation Centre (DIIC) is an
                   emerging initiative aimed at supporting aspiring
                   entrepreneurs, innovators, and student-led startups.
                 </p>
@@ -146,9 +146,10 @@ export default function About() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed">
-                To be a leading innovation hub that transforms Delhi into a
-                thriving startup capital — where bold ideas find the support,
-                resources, and community they need to create lasting impact.
+                To be a leading innovation hub that transforms the startup
+                landscape into a thriving capital of creativity — where bold
+                ideas find the support, resources, and community they need to
+                create lasting impact.
               </p>
             </div>
 

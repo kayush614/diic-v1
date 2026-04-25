@@ -214,7 +214,7 @@ export default function Apply() {
         style={{ backgroundColor: "var(--diic-blue)" }}
       >
         <p className="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-2">
-          Delhi Innovation and Incubation Centre
+          Innovation and Incubation Centre
         </p>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
           Apply for Incubation
