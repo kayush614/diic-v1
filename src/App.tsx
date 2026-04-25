@@ -41,7 +41,6 @@ function useHashRoute() {
 
 export default function App() {
   const route = useHashRoute()
-  const isHome = route === "#home" || route === ""
   const isAbout = route === "#about"
   const isApply = route === "#apply"
   const isContact = route === "#contact"
