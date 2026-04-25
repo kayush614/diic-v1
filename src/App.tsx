@@ -6,7 +6,6 @@ import About from "@/components/diic/About"
 import Apply from "@/components/diic/Apply"
 import Contact from "@/components/diic/Contact"
 import ComingSoon from "@/components/diic/ComingSoon"
-import WelcomeModal from "@/components/diic/WelcomeModal"
 import Footer from "@/components/diic/Footer"
 
 // New Pages
@@ -48,11 +47,9 @@ export default function App() {
   const isContact = route === "#contact"
   const comingSoon = COMING_SOON_ROUTES[route]
 
-  // Show WelcomeModal only on home
   return (
     <div className="bg-white min-h-screen overflow-x-hidden">
       <div className="max-w-[1140px] mx-auto bg-white min-h-screen flex flex-col relative">
-        {isHome && <WelcomeModal />}
         <Header />
         <main className="flex-1">
           <div key={route} className="animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
