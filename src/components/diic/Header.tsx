@@ -52,7 +52,7 @@ export default function Header() {
           />
           {/* Institution Name */}
           <div className="flex flex-col justify-center gap-1.5 ml-1">
-            <span className="text-[13px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#f26e21] leading-snug tracking-tight whitespace-nowrap">Delhi Innovation and Incubation Centre</span>
+            <span className="text-[13px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#e84c1e] leading-snug tracking-tight whitespace-nowrap">Delhi Innovation and Incubation Centre</span>
             <div className="w-6 sm:w-8 h-[2px] sm:h-[3px] rounded-full bg-[#f26e21]" />
           </div>
         </a>
