@@ -52,8 +52,8 @@ export default function Header() {
             style={{ clipPath: 'inset(0 0 1.5% 0)' }}
           />
           {/* Institution Name */}
-          <div className="flex-1 sm:flex-none flex flex-col justify-center items-center sm:items-start ml-1 sm:ml-0 min-w-0 pr-2 sm:pr-0">
-            <span className="text-[10px] min-[375px]:text-[11px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#e84c1e] leading-tight sm:leading-snug tracking-tight whitespace-nowrap">Delhi Innovation and Incubation Centre</span>
+          <div className="flex-1 sm:flex-none flex flex-col justify-center items-center sm:items-start ml-2 sm:ml-0 min-w-0 pr-1 sm:pr-0">
+            <span className="text-[12px] min-[375px]:text-[13px] min-[400px]:text-[14px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#e84c1e] leading-tight sm:leading-snug tracking-tight whitespace-nowrap">Delhi Innovation and Incubation Centre</span>
           </div>
         </a>
 
