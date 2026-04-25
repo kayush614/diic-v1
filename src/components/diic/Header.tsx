@@ -49,11 +49,11 @@ export default function Header() {
             src="/logo.jpg"
             alt="DIIC"
             className="h-12 w-auto sm:h-28 lg:h-32 flex-shrink-0 object-contain object-left"
+            style={{ clipPath: 'inset(0 0 1.5% 0)' }}
           />
           {/* Institution Name */}
           <div className="flex flex-col justify-center gap-1 ml-1 min-w-0">
-            <span className="text-[11px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#e84c1e] leading-snug tracking-tight sm:whitespace-nowrap">Delhi Innovation and Incubation Centre</span>
-            <div className="w-6 sm:w-8 h-[2px] sm:h-[3px] rounded-full bg-[#f26e21]" />
+            <span className="text-[14px] sm:text-[17px] lg:text-[20px] font-extrabold text-[#e84c1e] leading-tight sm:leading-snug tracking-tight sm:whitespace-nowrap text-balance sm:text-auto">Delhi Innovation and Incubation Centre</span>
           </div>
         </a>
 
@@ -113,6 +113,7 @@ export default function Header() {
                     src="/logo.jpg"
                     alt="DIIC"
                     className="h-8 w-8 object-contain"
+                    style={{ clipPath: 'inset(0 0 1.5% 0)' }}
                   />
                   <span className="text-[#1b4a92] font-extrabold text-lg">DIIC</span>
                 </SheetTitle>

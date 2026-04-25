@@ -12,22 +12,14 @@ import { format } from "date-fns";
 export default function HomeMainGrid() {
   const { announcements, loading, error } = useAnnouncements();
 
-  const fallbackNewsItems = [
-    { id: 1, title: "Test Statement 1", date: "Oct 12, 2023" },
-    { id: 2, title: "Test Statement 2", date: "Oct 10, 2023" },
-    { id: 3, title: "Test Statement 3", date: "Oct 08, 2023" },
-    { id: 4, title: "Test Statement 4", date: "Oct 05, 2023" },
-    { id: 5, title: "Test Statement 5", date: "Oct 01, 2023" },
-  ];
-
   const newsItems =
     !loading && !error && announcements && announcements.length > 0
       ? announcements.slice(0, 4).map((a) => ({
-        id: a.id,
-        title: a.title,
-        date: format(new Date(a.created_at), "MMM dd, yyyy"),
-      }))
-      : fallbackNewsItems;
+          id: a.id,
+          title: a.title,
+          date: format(new Date(a.created_at), "MMM dd, yyyy"),
+        }))
+      : [];
 
   // Unified blue-family palette — no more multi-color chaos
   const bottomBlocks = [
