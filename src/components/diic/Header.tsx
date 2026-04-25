@@ -132,13 +132,17 @@ export default function Header() {
                 <div className="p-4 mt-2">
                   <Button
                     className="w-full font-semibold bg-[#f26e21] hover:bg-[#d95d18] text-white"
+                    onClick={() => {
+                      window.location.hash = "#apply"
+                      setMobileOpen(false)
+                    }}
                   >
                     Apply for Incubation
                   </Button>
                 </div>
                 <div className="px-5 pb-4 flex flex-col gap-3 mt-2 bg-white">
-                  <a href="#home" className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Home</a>
-                  <a href="#contact" className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Contact Us</a>
+                  <a href="#home" onClick={() => setMobileOpen(false)} className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Home</a>
+                  <a href="#contact" onClick={() => setMobileOpen(false)} className="text-sm font-medium text-gray-500 hover:text-[#1b4a92]">Contact Us</a>
                   
                   <div className="flex items-center gap-4 mt-4 text-gray-500">
                     <a href="https://www.linkedin.com/company/delhi-innovation-and-incubation-centre/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[#1b4a92] transition-colors"><LinkedInIcon /></a>

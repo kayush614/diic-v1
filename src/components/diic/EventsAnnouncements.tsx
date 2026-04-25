@@ -75,6 +75,7 @@ export default function EventsAnnouncements() {
                 size="sm"
                 className="text-xs font-semibold gap-1"
                 style={{ color: "var(--diic-blue)" }}
+                onClick={() => window.location.hash = "#events"}
               >
                 View All <ArrowRight size={12} />
               </Button>
@@ -155,6 +156,7 @@ export default function EventsAnnouncements() {
               <Button
                 className="w-full font-semibold text-sm"
                 style={{ backgroundColor: "var(--diic-blue)", color: "white" }}
+                onClick={() => window.location.hash = "#events"}
               >
                 View All Events
                 <ArrowRight size={14} className="ml-1" />
@@ -295,6 +297,7 @@ export default function EventsAnnouncements() {
                   borderColor: "var(--diic-blue)",
                   color: "var(--diic-blue)",
                 }}
+                onClick={() => window.location.hash = "#resources"}
               >
                 View All Announcements <ArrowRight size={12} />
               </Button>
