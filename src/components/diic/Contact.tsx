@@ -10,7 +10,7 @@ export default function Contact() {
         style={{ backgroundColor: "var(--diic-blue)" }}
       >
         <p className="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-2">
-          DIIC – Innovation Centre
+          DIIC
         </p>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
           Contact Us

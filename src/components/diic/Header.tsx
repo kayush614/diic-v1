@@ -54,7 +54,7 @@ export default function Header() {
           <div className="flex flex-col justify-center gap-1 ml-1">
             <span className="text-[24px] sm:text-[36px] lg:text-[42px] font-black text-[#1b4a92] leading-none tracking-tight">DIIC</span>
             <div className="w-6 sm:w-8 h-[2px] sm:h-[3px] rounded-full bg-[#f26e21]" />
-            <span className="text-[9px] sm:text-[11px] lg:text-[12.5px] font-medium text-gray-500 tracking-[0.05em] sm:tracking-[0.12em] uppercase max-w-[160px] sm:max-w-none">Innovation and Incubation Centre</span>
+            <span className="text-[9px] sm:text-[11px] lg:text-[12.5px] font-medium text-gray-500 tracking-[0.05em] sm:tracking-[0.12em] uppercase max-w-[160px] sm:max-w-none"></span>
           </div>
         </a>
 
